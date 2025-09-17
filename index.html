@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bhargav Uday Shivbhakta — Portfolio</title>
+  <meta name="description" content="Bhargav Uday Shivbhakta — MS CS at SDSU. Software Engineering, Data, and AI/ML projects, experience, and contact." />
+  <link rel="icon" href="/assets/favicon.ico" />
+  <meta property="og:title" content="Bhargav Uday Shivbhakta — Portfolio" />
+  <meta property="og:description" content="Projects, experience, leadership, and resume." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    :root {
+      --bg:#05080f; --surface:#0c1220; --text:#e6edf3; --muted:#8b98b5; --brand:#7c3aed; --accent:#22d3ee; --ring:#7c3aed55;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:radial-gradient(1200px 600px at 10% -10%,rgba(34,211,238,.12),transparent 45%),radial-gradient(1000px 500px at 120% 0%,rgba(124,58,237,.12),transparent 40%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(5,8,15,.6);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid rgba(124,58,237,.2);z-index:50}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .badge{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.35);color:#c7b9ff}
+    .menu{display:flex;gap:18px}
+    .menu a{opacity:.88}
+    .menu a:hover{opacity:1}
+    .switch{position:relative;width:48px;height:28px;border-radius:999px;background:#1f2937;border:1px solid rgba(124,58,237,.35);cursor:pointer}
+    .dot{position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:transform .25s ease}
+    body.light{--bg:#f6f7fb; --surface:#ffffff; --text:#080b12; --muted:#475569}
+    body.light .dot{transform:translateX(20px)}
+
+    main{padding:32px 0}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center;margin-top:10px}
+    .card{background:var(--surface);border:1px solid rgba(124,58,237,.2);border-radius:22px;padding:22px}
+    h1{font-size:44px;line-height:1.05;margin:10px 0}
+    .tagline{font-size:18px;color:var(--muted)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:1px solid rgba(124,58,237,.35);background:rgba(124,58,237,.12)}
+    .btn:hover{box-shadow:0 0 0 4px var(--ring)}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .kpis .card{padding:16px;text-align:center}
+    .kpis .n{font-size:22px;font-weight:800}
+
+    section{padding:26px 0}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
+    .project{display:flex;flex-direction:column;gap:10px}
+    .project img{width:100%;height:140px;object-fit:cover;border-radius:12px;border:1px solid rgba(124,58,237,.2)}
+    .project h3{margin:0;font-size:18px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    .list{display:grid;gap:12px}
+    .row{display:flex;justify-content:space-between;gap:16px;border:1px solid rgba(124,58,237,.2);background:var(--surface);padding:14px 16px;border-radius:14px}
+    .row .left{display:flex;flex-direction:column;gap:4px}
+    .row .title{font-weight:700}
+    .row .meta{font-size:13px;color:var(--muted)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{border:1px dashed rgba(124,58,237,.35);padding:8px 12px;border-radius:999px;background:rgba(124,58,237,.08);font-size:13px}
+
+    .avatar{width:160px;height:160px;border-radius:16px;object-fit:cover;border:2px solid rgba(124,58,237,.35)}
+    .qr{width:90px;height:90px;border-radius:12px;border:1px dashed rgba(124,58,237,.3)}
+
+    footer{padding:40px 0;color:var(--muted);text-align:center}
+
+    /* small scroll-reveal */
+    [data-reveal]{transform:translateY(12px);opacity:0;transition:opacity .5s ease, transform .5s ease}
+    [data-reveal].visible{transform:none;opacity:1}
+
+    @media (max-width: 960px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bhargav Uday Shivbhakta",
+    "email": "mailto:bhargavshivbhakta@gmail.com",
+    "telephone": "+1-619-335-3337",
+    "jobTitle": "MS CS Candidate | Software Engineering & AI/ML",
+    "address": {"@type":"PostalAddress","addressLocality":"San Diego","addressRegion":"CA","addressCountry":"US"},
+    "sameAs": [
+      "https://www.linkedin.com/in/YOUR-LINKEDIN",
+      "https://github.com/YOUR-GITHUB"
+    ],
+    "url": "https://www.sbhargav.com"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><span class="badge">🚀 Portfolio</span> <span>Bhargav Uday Shivbhakta</span></div>
+        <div class="menu">
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+          <div class="switch" id="themeSwitch" title="Toggle theme"><div class="dot"></div></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card" data-reveal>
+        <span class="badge">MS CS @ SDSU • Software Engineering • AI/ML</span>
+        <h1 id="typed">Turning data & systems into real-world impact.</h1>
+        <p class="tagline">I build reliable software and applied ML solutions. Recent wins: 92% deepfake detection accuracy, 25% efficiency boost in water management, and 20% higher crop yield with AI-driven scheduling.</p>
+        <div class="actions">
+          <a class="btn" href="/SBhargav_CV.pdf" download>⬇️ Download Resume</a>
+          <a class="btn" href="mailto:bhargavshivbhakta@gmail.com">✉️ Email</a>
+          <a class="btn" href="tel:+16193353337">☎️ Call</a>
+          <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">💼 LinkedIn</a>
+          <a class="btn" href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener">💻 GitHub</a>
+        </div>
+        <div class="kpis">
+          <div class="card"><div class="n">92%+</div><div class="meta">Deepfake detection accuracy</div></div>
+          <div class="card"><div class="n">9.2/10</div><div class="meta">B.E. CGPA (SPPU)</div></div>
+          <div class="card"><div class="n">48+</div><div class="meta">Events coordinated</div></div>
+        </div>
+      </div>
+      <div class="card" style="text-align:center" data-reveal>
+        <img class="avatar" src="/assets/profile.jpg" alt="Bhargav Uday Shivbhakta headshot"/>
+        <p class="tagline" style="margin-top:10px">San Diego, CA • Open to internships</p>
+        <div class="skills" style="justify-content:center;margin-top:10px">
+          <span class="skill">Python</span>
+          <span class="skill">C++</span>
+          <span class="skill">Java</span>
+          <span class="skill">R</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Data Structures & Algorithms</span>
+          <span class="skill">Git/GitHub</span>
+          <span class="skill">Linux</span>
+          <span class="skill">TensorFlow</span>
+          <span class="skill">PyTorch</span>
+          <span class="skill">scikit-learn</span>
+          <span class="skill">Keras</span>
+          <span class="skill">OpenCV</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-title" data-reveal>
+        <h2>Featured Projects</h2>
+        <a class="badge" href="https://github.com/YOUR-GITHUB?tab=repositories" target="_blank">View All →</a>
+      </div>
+      <div class="grid">
+        <article class="project card" data-reveal>
+          <img src="/assets/project1.jpg" alt="Deepfake detection project" />
+          <h3>AI-powered Deepfake Image Forgery Detection</h3>
+          <p>Deep learning system achieving <strong>92% accuracy</strong> on benchmark datasets; strengthens trust in digital media.</p>
+          <div class="actions">
+            <a class="btn" href="#">Case Study</a>
+            <a class="btn" href="#">Source</a>
+          </div>
+        </article>
+        <article class="project card" data-reveal>
+          <img src="/assets/project2.jpg" alt="Smart water management" />
+          <h3>Smart Water Management System</h3>
+          <p>AI + IoT app for real-time water usage monitoring; improved management efficiency by <strong>25%</strong>.</p>
+          <div class="actions">
+            <a class="btn" href="#">Live Demo</a>
+            <a class="btn" href="#">Source</a>
+          </div>
+        </article>
+        <article class="project card" data-reveal>
+          <img src="/assets/project3.jpg" alt="Smart crop plantation" />
+          <h3>Smart Crop Plantation System</h3>
+          <p>AI-powered scheduling that increased crop yield by <strong>20%</strong> through optimized plantation cycles.</p>
+          <div class="actions">
+            <a class="btn" href="#">Report</a>
+            <a class="btn" href="#">Source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-title" data-reveal><h2>Experience</h2></div>
+      <div class="list">
+        <div class="row" data-reveal>
+          <div class="left">
+            <div class="title">Software Engineering Intern — TechR Business Solutions</div>
+            <div class="meta">Nov 2022 – Feb 2023 • Remote</div>
+            <div class="meta">Contributed to debugging/optimizing 5 modules with senior engineers; improved performance by <strong>30%</strong>.</div>
+          </div>
+          <div>Python • Backend • Optimization</div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="left">
+            <div class="title">Operations Manager Intern — TechR Business Solutions</div>
+            <div class="meta">Feb 2023 – May 2023 • Remote</div>
+            <div class="meta">Managed <strong>50</strong> interns and led <strong>6</strong> client projects; streamlined reporting to boost efficiency by <strong>15%</strong>.</div>
+          </div>
+          <div>Leadership • Agile • Reporting</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="section-title" data-reveal><h2>Education</h2></div>
+      <div class="list">
+        <div class="row" data-reveal>
+          <div class="left">
+            <div class="title">M.S. in Computer Science — San Diego State University (SDSU)</div>
+            <div class="meta">2025 – Present • Expected Graduation: May 2027</div>
+            <div class="meta">Focus: Data Analysis, Backend Systems, Applied ML; databases, distributed systems, and software optimization.</div>
+          </div>
+          <div>San Diego, CA</div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="left">
+            <div class="title">PG Diploma in Artificial Intelligence & Machine Learning — MIT World Peace University</div>
+            <div class="meta">2024 – 2025</div>
+          </div>
+          <div>Pune, India</div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="left">
+            <div class="title">B.E. in Electronics & Computer Engineering — PES Modern College of Engineering, SPPU</div>
+            <div class="meta">2020 – 2024 • CGPA: 9.2/10.00</div>
+          </div>
+          <div>Pune, India</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & ACHIEVEMENTS -->
+    <section id="leadership">
+      <div class="section-title" data-reveal><h2>Leadership & Achievements</h2></div>
+      <div class="list">
+        <div class="row" data-reveal>
+          <div class="left">
+            <div class="title">President — Electronics & Computer Engineering Student Association (E‑CESA)</div>
+            <div class="meta">Led 48+ academic & technical events; drove community initiatives.</div>
+          </div>
+          <div>2021 – 2023</div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="left">
+            <div class="title">Head — ECOTRON (Technical Fest)</div>
+            <div class="meta">Directed fest for 2 years, managing 3,000+ attendees and 20+ sponsors annually.</div>
+          </div>
+          <div>2022 – 2024</div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="left">
+            <div class="title">President — Rotaract Club of PES MCOE</div>
+            <div class="meta">Organized community service projects and college-wide initiatives.</div>
+          </div>
+          <div>2022 – 2023</div>
+        </div>
+        <div class="row" data-reveal>
+          <div class="left">
+            <div class="title">Key Academic Achievements</div>
+            <div class="meta">Ranked 4th in E&CE at Pune University; Top 1% in HSC with SHE National Scholarship.</div>
+          </div>
+          <div>—</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title" data-reveal><h2>Contact</h2></div>
+      <div class="card" data-reveal>
+        <p>📍 San Diego, CA &nbsp;&nbsp; ✉️ <a href="mailto:bhargavshivbhakta@gmail.com">bhargavshivbhakta@gmail.com</a> &nbsp;&nbsp; ☎️ <a href="tel:+16193353337">+1 (619) 335‑3337</a></p>
+        <p class="tagline">Tip: add this site's QR code to your resume so recruiters can scan it instantly.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Bhargav Uday Shivbhakta • Built with HTML/CSS/JS • <a href="#" id="toTop">Back to top ↑</a></div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const themeSwitch = document.getElementById('themeSwitch');
+    const stored = localStorage.getItem('theme');
+    if(stored === 'light') document.body.classList.add('light');
+    themeSwitch.addEventListener('click',()=>{
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    });
+    // Year & back-to-top
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('toTop').addEventListener('click', e=>{ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'});});
+    // Simple typed effect
+    (function(){
+      const el = document.getElementById('typed');
+      const phrases = [
+        'Turning data & systems into real-world impact.',
+        'Software Engineering • Data • AI/ML.',
+        'Building reliable, human-centered products.'
+      ];
+      let i=0; let j=0; let deleting=false;
+      function tick(){
+        const p = phrases[i%phrases.length];
+        el.textContent = deleting ? p.slice(0,--j) : p.slice(0,++j);
+        if(!deleting && j===p.length){ setTimeout(()=>deleting=true,1200); }
+        else if(deleting && j===0){ deleting=false; i++; }
+        setTimeout(tick, deleting?40:70);
+      }
+      tick();
+    })();
+    // Scroll reveal
+    const revealEls=[...document.querySelectorAll('[data-reveal]')];
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} });
+    },{threshold:.12});
+    revealEls.forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
